@@ -1,9 +1,10 @@
+server:
+  port: 8084
 spring:
   application:
     name: usuarios
   profiles:
     active: local
-
 ---
 spring:
   profile: local

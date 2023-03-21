@@ -12,7 +12,7 @@ import org.springframework.web.bind.annotation.*;
 
 @RestController
 @AllArgsConstructor
-@RequestMapping(path ="/usuario")
+@RequestMapping(path ="/user")
 public class UsuarioController {
 
     private final UsuarioSave usuarioSave;
@@ -23,8 +23,8 @@ public class UsuarioController {
         return new ResponseEntity<>(usuarioSave.saveUser(user), HttpStatus.CREATED);
 
     }
-    @GetMapping("/{numdocumento}")
-    public ResponseEntity<Usuario> getUser(@PathVariable String numdocumento) {
+    @GetMapping()
+    public ResponseEntity<Usuario> getUser(@RequestParam String numdocumento) {
         System.out.println(numdocumento);
        return ResponseEntity.ok(usuarioGet.getUsuario(numdocumento));
     }
