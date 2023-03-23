@@ -5,7 +5,6 @@ import com.example.usuarios.domain.entities.Usuario;
 import com.example.usuarios.infrastructure.dto.UsuarioDto;
 import org.mapstruct.Mapper;
 import org.mapstruct.Mapping;
-import org.mapstruct.MappingConstants;
 import org.mapstruct.Mappings;
 
 @Mapper(componentModel = "Spring")

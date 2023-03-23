@@ -21,7 +21,6 @@ public class UsuarioController {
     @PostMapping
     public ResponseEntity<Usuario> saveUser(@RequestBody Usuario user) {
         return new ResponseEntity<>(usuarioSave.saveUser(user), HttpStatus.CREATED);
-
     }
     @GetMapping()
     public ResponseEntity<Usuario> getUser(@RequestParam String numdocumento) {
